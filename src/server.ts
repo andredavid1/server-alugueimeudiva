@@ -4,7 +4,11 @@ import routes from './routes';
 
 const app = express();
 
-app.use(cors())
+const corsOptions = {
+  origin: 'https://alugueimeudiva.netlify.app/'
+}
+
+app.use(cors(corsOptions))
 app.use(express.json());
 
 app.use(routes)
